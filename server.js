@@ -30,7 +30,22 @@ app.listen(3000);
 
 
 app.get('/', function (req, res){
-	res.render('home')
+	pg.connect(connectionString, function (err, client, done){
+		//just texting to see if connection works
+		client.query('SELECT * FROM western', function (err, result){
+			client.query('SELECT * FROM eastern', function (err, result2){
+			var data = {
+				western : result.rows,
+				eastern : result2.rows
+			};
+			res.render('home', data);							
+			});
+			done();
+			// console.log(data);
+			// res.send(data);
+			
+		});
+	});
 });
 
 //this route returns values from an API in the form of JSON
@@ -62,16 +77,24 @@ app.post('/form', function (req, res){
 	var eastern = req.body.eastern 
 		// res.render('works', req.body);
 		// res.render('works', req.body);
-		res.send(req.body)	
+
 	pg.connect(connectionString, function (err, client, done){
 		//just texting to see if connection works
-		client.query('SELECT * FROM western', [req.body.western], function (err, result){
+		client.query('select sa.name FROM western_easterns we LEFT JOIN spirit_animals sa on we.spirit_animal_id = sa.id WHERE western_id = $1 AND eastern_id = $2;', [req.body.western, req.body.eastern], function (err, result){
 			done();
-			// var data = result.rows;
+			var data = {
+				name : result.rows[0].name
+			}
 			// console.log(data);
+			// res.send(result.rows);
+			res.render('result', data);
+			// res.send(data);
 		});
 	});
 });
+
+
+
 
 
 

@@ -32,7 +32,6 @@ div {
 	width:135px;
 	height:30px;
 	font-size: 20px;
-
 }
 
 #submit{
@@ -56,4 +55,12 @@ h1{
 	font-size: 60px;
 	font-family: Verdana;
 	color: white;
+}
+
+#submit{
+	font-size: 100px;
+}
+
+#banana{
+	font-size: 40px;
 }

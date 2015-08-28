@@ -1,17 +1,25 @@
+<div id="bigdiv">
 <div id="signs">
+	<br>
+		<h1>Western Sign</h1>
 	<form action="/form" method="POST">
-		<select name="western">
+		<select name="western" id="shoe">
 			{{#each western}}
 			<option value="{{id}}">{{name}}</option>
 			{{/each}}
 
 		</select>
 	<br>
-		<select name="eastern">
+		<h1>Eastern Sign</h1>
+		<select name="eastern" id="jamon">
 			{{#each eastern}}
 			<option value="{{id}}">{{name}}</option>
 			{{/each}}
 		</select>
-	<input type="submit" value="submit">
+	<br>
+
+	<input type="submit" value="submit" id="submit">
 	</form>
+	<br>
+</div>
 </div>

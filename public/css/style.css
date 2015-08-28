@@ -1,0 +1,59 @@
+body {
+	background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/06/galaxy-wallpapers-11.jpg");
+}
+
+title {
+	font-size: 200%;
+	color: white;
+}
+
+div {
+	background-image: url('https://www.artinvesta.com/uploads/artwork/49/1361863386PsychedelicCopy.JPG')
+	width: 480px;
+	right:50%;
+}
+
+#poo {
+	font-size: 125px;
+	font-family: Verdana;
+	color: white;
+}
+
+#foo{
+	font-size: 50px;
+}
+
+#shoe{
+	width:135px;
+	height:30px;
+	font-size: 20px;
+}
+#jamon{
+	width:135px;
+	height:30px;
+	font-size: 20px;
+
+}
+
+#submit{
+	width:150px;
+	height:40px;
+}
+#box{
+	background-image: url('https://www.artinvesta.com/uploads/artwork/49/1361863386PsychedelicCopy.JPG');
+}
+
+#slug{
+	font-size: 200px;
+}
+
+h1{
+	font-size: 50px;
+	color: white;
+}
+
+#smoo{
+	font-size: 60px;
+	font-family: Verdana;
+	color: white;
+}

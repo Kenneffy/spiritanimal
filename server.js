@@ -6,7 +6,7 @@ var path = require('path');
 var pg = require("pg");
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
-var connectionString = "pg://localhost/spiritanimal";
+var connectionString = "/process.env.spiritanimal";
 
 var app = express();
 
@@ -26,10 +26,15 @@ app.use(methodOverride(function (req, res) {
 	}
 }));
 
-app.listen(3000);
+app.set('port', (process.env.PORT || 3000));
+
+app.listen(app.get('port'), function() {
+    console.log("App running on port : ", app.get('port'));
+});
 
 
 app.get('/', function (req, res){
+	console.log(process.env.DATABASE_URL);
 	pg.connect(connectionString, function (err, client, done){
 		client.query('SELECT * FROM western', function (err, result){
 			client.query('SELECT * FROM eastern', function (err, result2){

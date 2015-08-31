@@ -6,7 +6,8 @@ var path = require('path');
 var pg = require("pg");
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
-var connectionString = "/process.env.spiritanimal";
+
+
 
 var app = express();
 
@@ -18,6 +19,14 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static('public'));
 
+app.configure('development', function (){
+	var connectionString = "/process.env.spiritanimal";
+});
+
+app.configure('production', function(){
+	var connectionString = process.env.DATABASE_URL;
+});
+
 app.use(methodOverride(function (req, res) {
 	if(req.body && typeof req.body === 'object' && '_method' in req.body) {
 		var method = req.body._method;
@@ -26,7 +35,7 @@ app.use(methodOverride(function (req, res) {
 	}
 }));
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 8080));
 
 app.listen(app.get('port'), function() {
     console.log("App running on port : ", app.get('port'));

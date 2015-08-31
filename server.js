@@ -64,13 +64,6 @@ app.get('/', function (req, res){
 //   });
 // });
 
-//values selected by dropdowns responsive when submitted
-// app.post('/form', function (req, res){
-// 	if (req.body.western == 'aquarius' && req.body.eastern == 'dog'){
-// 		res.render('works', req.body);
-// 	}
-// })
-
 app.post('/form', function (req, res){
 	var western = req.body.western 
 	var eastern = req.body.eastern 

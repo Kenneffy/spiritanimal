@@ -3,20 +3,23 @@ body {
 }
 
 title {
-	font-size: 200%;
+	font-size: 600%;
 	color: white;
 }
 
 div {
 	background-image: url('https://www.artinvesta.com/uploads/artwork/49/1361863386PsychedelicCopy.JPG')
-	width: 480px;
-	right:50%;
+	width: 1480px;
+	right:85%;
+
+
 }
 
 #poo {
 	font-size: 125px;
 	font-family: Verdana;
 	color: white;
+	width: 120px;
 }
 
 #foo{
@@ -62,5 +65,9 @@ h1{
 }
 
 #banana{
+	font-size: 40px;
+}
+
+#box h1{
 	font-size: 40px;
 }

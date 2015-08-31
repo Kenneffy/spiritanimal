@@ -16,7 +16,8 @@ CREATE TABLE spirit_animals (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   description TEXT,
-  url TEXT  
+  url TEXT,
+  image TEXT  
 );
 
 CREATE TABLE western_easterns (

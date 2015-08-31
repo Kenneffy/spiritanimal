@@ -24,7 +24,8 @@ app.configure('development', function (){
 });
 
 app.configure('production', function(){
-	var connectionString = process.env.DATABASE_URL;
+	var connectionString = "postgres://nvzcpymechjwju:iDlir3fli4ydPDXt7JFafYeLDk@ec2-54-83-58-191.compute-1.amazonaws.com:5432:/d5j26un5thict3";
+
 });
 
 app.use(methodOverride(function (req, res) {

@@ -3,7 +3,6 @@ body {
 }
 
 title {
-	font-size: 600%;
 	color: white;
 }
 
@@ -12,18 +11,17 @@ div {
 	width: 1480px;
 	right:85%;
 
-
 }
 
 #poo {
-	font-size: 125px;
+	font-size: 140px;
 	font-family: Verdana;
 	color: white;
-	width: 120px;
 }
 
 #foo{
 	font-size: 50px;
+	color: white;
 }
 
 #shoe{

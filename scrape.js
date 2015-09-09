@@ -1,3 +1,4 @@
+
 //DB: spiritanimals
 //Seeded eastern & western table with names of animals already
 

@@ -8,8 +8,8 @@ var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 
 // var connectionString = "pg://localhost/spiritanimal";
-var connectionString = "process.env.DATABASE_URL";
-// var connectionString = "postgres://kzycbldehjayur:6IMcEVOxKhO0iR8XAGmXqaI2h0@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d1s046ueu3dctr"
+// var connectionString = "process.env.DATABASE_URL";
+var connectionString = "postgres://kzycbldehjayur:6IMcEVOxKhO0iR8XAGmXqaI2h0@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d1s046ueu3dctr"
 
 var app = express();
 

@@ -13,6 +13,8 @@ var connectionString = "postgres://kzycbldehjayur:6IMcEVOxKhO0iR8XAGmXqaI2h0@ec2
 
 var app = express();
 
+app.listen(5432);
+
 app.engine('handlebars', exphbs({defaultLayout: 'main', extname: 'handlebars'}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
@@ -34,10 +36,6 @@ app.use(methodOverride(function (req, res) {
 // app.listen(app.get('port'), function() {
 //     console.log("App running on port : ", app.get('port'));
 // });
-
-
-app.listen(5432);
-
 
 app.get('/', function (req, res){
 	pg.connect(connectionString, function (err, client, done){

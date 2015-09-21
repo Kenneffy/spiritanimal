@@ -8,12 +8,10 @@ var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 
 // var connectionString = "pg://localhost/spiritanimal";
-var connectionString = "process.env.DATABASE_URL";
-// var connectionString = "postgres://kzycbldehjayur:6IMcEVOxKhO0iR8XAGmXqaI2h0@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d1s046ueu3dctr"
+// var connectionString = "process.env.DATABASE_URL";
+var connectionString = "postgres://kzycbldehjayur:6IMcEVOxKhO0iR8XAGmXqaI2h0@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d1s046ueu3dctr"
 
 var app = express();
-
-app.listen(5432);
 
 app.engine('handlebars', exphbs({defaultLayout: 'main', extname: 'handlebars'}));
 app.set('views', path.join(__dirname, 'views'));
@@ -31,11 +29,13 @@ app.use(methodOverride(function (req, res) {
 	}
 }));
 
-// app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 3000));
 
-// app.listen(app.get('port'), function() {
-//     console.log("App running on port : ", app.get('port'));
-// });
+app.listen(app.get('port'), function() {
+    console.log("App running on port : ", app.get('port'));
+});
+
+// app.listen(3000);
 
 app.get('/', function (req, res){
 	pg.connect(connectionString, function (err, client, done){

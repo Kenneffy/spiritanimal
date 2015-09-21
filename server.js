@@ -29,7 +29,7 @@ app.use(methodOverride(function (req, res) {
 	}
 }));
 
-pg.connect(process.env.DATABASE_URL, function(err, client) {
+pg.connect(connectionString, function(err, client) {
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
 

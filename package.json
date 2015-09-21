@@ -4,13 +4,14 @@
   "description": "WDI Final Project for real",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kenneffy/spiritanimal.git"
   },
-  "author": "",
+  "author": "kenneth-yee",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Kenneffy/spiritanimal/issues"
@@ -25,5 +26,8 @@
     "path": "^0.11.14",
     "pg": "^4.4.1",
     "request": "^2.61.0"
+  },
+  "engines": {
+    "node": "0.12.x"
   }
 }

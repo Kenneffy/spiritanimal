@@ -10,7 +10,9 @@ var request = require('request');
 //cheerio to transverse through body of response
 var cheerio = require('cheerio');
 var pg = require("pg");
-var connectionString = "pg://localhost/spiritanimal";
+// var connectionString = "pg://localhost/spiritanimal";
+var connectionString = "postgres://kzycbldehjayur:6IMcEVOxKhO0iR8XAGmXqaI2h0@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d1s046ueu3dctr"
+
 
 //fn to determine if response is JSON
 function IsJsonString(str) {

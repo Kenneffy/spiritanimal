@@ -44,7 +44,7 @@ function insertWesternEasterns(obj){
 
     client.query('SELECT * FROM western where name = $1', [obj.western_sign], function (err, western) {
 
-      var western_id = western.rows[0].id
+      var western_id = western.rows[0].id;
 
       client.query('SELECT * from eastern where name = $1', [obj.eastern_sign], function (errr, eastern) {
 
@@ -91,7 +91,11 @@ request('http://www.primalastrology.com/primal-zodiac-by-combination.html', func
         var primal_zodiac_sign = tds.eq(4).text();
 
         //variables contained above are being assigned keys in object
-        var we = {'western_sign': western_sign, 'eastern_sign': eastern_sign, 'primal_zodiac_sign': primal_zodiac_sign};
+        var we = {
+          'western_sign': western_sign, 
+          'eastern_sign': eastern_sign, 
+          'primal_zodiac_sign': primal_zodiac_sign
+        };
 
         //objects being pushed into western_easterns array
         westerns_easterns.push(we);

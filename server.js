@@ -8,9 +8,9 @@ var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 
 // this is for connecting and making changes to your local server
-var connectionString = "pg://localhost/spiritanimal";
+// var connectionString = "pg://localhost/spiritanimal";
 // var connectionString = "process.env.DATABASE_URL";
-// var connectionString = "postgres://kzycbldehjayur:6IMcEVOxKhO0iR8XAGmXqaI2h0@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d1s046ueu3dctr"
+var connectionString = "postgres://kzycbldehjayur:6IMcEVOxKhO0iR8XAGmXqaI2h0@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d1s046ueu3dctr"
 
 var app = express();
 
@@ -36,7 +36,7 @@ app.listen(app.get('port'), function() {
     console.log("App running on port : ", app.get('port'));
 });
 
-app.listen(3000);
+// app.listen(3000);
 
 app.get('/', function (req, res){
 	pg.connect(connectionString, function (err, client, done){
@@ -77,22 +77,7 @@ app.post('/form', function (req, res){
 	});	
 });
 
-//this route returns values from an API in the form of JSON
-// app.get('/batman', function (req, res) {
-//   request('http://www.omdbapi.com/?s=batman&y=&plot=short&r=json', function (err, response, body) {
-//     var results = JSON.parse(body)["Search"]
-//     // res.send(results)
-//     res.render('batman')
-//   });
-// });
 
-// this brings me back the entire HTML
-// app.get('/spirit', function (req, res) {
-//   request('http://www.primalastrology.com/unicorn.html', function (err, response, body) {
-//   	var $ = cheerio.load(body);
-//     res.send(results)
-//   });
-// });
 
 
 

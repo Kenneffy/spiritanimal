@@ -1,26 +1,21 @@
-<div id="bigdiv">
-<div id="signs">
-	<br>
-		<h1>Western Sign</h1>
+<h2>Western Sign</h2>
 	<form action="/form" method="POST">
-		<select name="western" id="shoe">
-			{{#each western}}
-			<option value="{{id}}">{{name}}</option>
-			{{/each}}
-
-		</select>
-	<br>
-		<h1>Eastern Sign</h1>
-		<select name="eastern" id="jamon">
-			{{#each eastern}}
-			<option value="{{id}}">{{name}}</option>
-			{{/each}}
-		</select>
-	<br>
-	<br>
-	<br>
+		<div>
+			<select name="western" class="western">
+				{{#each western}}
+					<option value="{{id}}">{{name}}</option>
+				{{/each}}
+			</select>
+			</div>
+<h2>Eastern Sign</h2>
+		<div>
+			<select name="eastern" class="eastern">
+				{{#each eastern}}
+					<option value="{{id}}">{{name}}</option>
+				{{/each}}
+			</select>
+		</div>
 	<input type="submit" value="submit" id="submit">
 	</form>
-	<br>
-</div>
-</div>
+
+

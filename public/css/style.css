@@ -1,71 +1,53 @@
+body, h1, h2, p, select {
+	margin: 0;
+	padding: 0;
+}
 body {
 	background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/06/galaxy-wallpapers-11.jpg");
 }
-
-title {
-	color: white;
-}
-
-div {
-	background-image: url('https://www.artinvesta.com/uploads/artwork/49/1361863386PsychedelicCopy.JPG')
-	width: 1480px;
-	right:85%;
-
-}
-
-#poo {
-	font-size: 140px;
+h1, h2, p {
 	font-family: Verdana;
 	color: white;
+	text-align: center;
+	padding: 40px 0 40px 0;
 }
-
-#foo{
+h1 {
+	font-size: 120px;
+	padding-top: 190px;
+}
+h2 {
+	font-size: 70px;
+}
+p {
 	font-size: 50px;
-	color: white;
 }
-
-#shoe{
-	width:135px;
-	height:30px;
-	font-size: 20px;
+a {
+	text-decoration: none;
 }
-#jamon{
-	width:135px;
-	height:30px;
-	font-size: 20px;
+a:hover {
+	color: blue;
 }
-
-#submit{
-	width:150px;
-	height:40px;
+select {
+	position: relative;
+	left: 45%;
+	margin: 0 auto;
+	color: purple;
+	font-weight: bold;
+	font-size: 40px;
 }
-#box{
+.resultBox{
 	background-image: url('https://www.artinvesta.com/uploads/artwork/49/1361863386PsychedelicCopy.JPG');
 }
-
-#slug{
-	font-size: 200px;
+#submit {
+	width: 296px;
+	height: 55px;
+	position: relative;
+	left: 44%;
+	font-size: 30px;
+	margin-top: 89px;
 }
 
-h1{
-	font-size: 50px;
-	color: white;
-}
 
-#smoo{
-	font-size: 60px;
-	font-family: Verdana;
-	color: white;
-}
 
-#submit{
-	font-size: 100px;
-}
 
-#banana{
-	font-size: 40px;
-}
 
-#box h1{
-	font-size: 40px;
-}
